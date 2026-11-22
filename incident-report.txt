@@ -1,0 +1,137 @@
+SOC INCIDENT REPORT
+
+Project:
+SSH Brute Force Attack Detection and Investigation
+
+Incident Type:
+Possible SSH Brute Force Attack
+
+Severity:
+Medium
+
+Status:
+Investigated
+
+--------------------------------------------------
+
+1. INCIDENT SUMMARY
+
+A security investigation was conducted using
+simulated Linux SSH authentication logs.
+
+The investigation identified multiple failed
+login attempts originating from a single IP
+address, targeting multiple user accounts.
+
+The activity was identified as a possible
+SSH brute-force attack.
+
+--------------------------------------------------
+
+2. SOURCE IP ADDRESS
+
+Suspicious IP Address:
+192.168.1.50
+
+Total Failed Login Attempts:
+10
+
+--------------------------------------------------
+
+3. TARGETED USER ACCOUNTS
+
+The following usernames were targeted:
+
+admin
+root
+test
+guest
+
+The admin and root accounts received repeated
+login attempts.
+
+--------------------------------------------------
+
+4. LOG ANALYSIS
+
+Authentication logs were analyzed using
+Linux command-line tools.
+
+Commands used:
+
+grep
+awk
+sed
+
+The investigation identified repeated failed
+authentication attempts from the same source IP.
+
+--------------------------------------------------
+
+5. SUCCESSFUL LOGIN ANALYSIS
+
+Successful authentication events were also
+reviewed.
+
+Successful login events were recorded from
+192.168.1.20.
+
+No successful login from the suspicious
+IP address 192.168.1.50 was observed
+in the analyzed logs.
+
+--------------------------------------------------
+
+6. DETECTION RULE
+
+Alert Condition:
+
+5 or more failed SSH login attempts from
+a single IP address within 10 minutes.
+
+The suspicious IP generated 10 failed
+login attempts and triggered the detection
+threshold.
+
+--------------------------------------------------
+
+7. INVESTIGATION FINDINGS
+
+- Repeated SSH authentication failures detected.
+- One suspicious source IP identified.
+- Multiple user accounts targeted.
+- Brute-force activity suspected.
+- No successful login from the suspicious
+  IP was observed in the sample logs.
+
+--------------------------------------------------
+
+8. RECOMMENDED ACTIONS
+
+- Investigate the source IP address.
+- Monitor future authentication attempts.
+- Review successful login events.
+- Block the source IP if malicious activity
+  is confirmed.
+- Implement account lockout or rate limiting.
+- Use strong passwords and MFA.
+- Monitor SSH authentication logs.
+
+--------------------------------------------------
+
+9. CONCLUSION
+
+The investigation identified suspicious
+SSH login activity consistent with a
+possible brute-force attack.
+
+The activity originated from
+192.168.1.50 and involved 10 failed
+login attempts targeting multiple accounts.
+
+No successful login from the suspicious
+IP was identified in the analyzed logs.
+
+This investigation demonstrates basic
+SOC log analysis, alert detection,
+incident investigation, and reporting.

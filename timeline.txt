@@ -1,0 +1,14 @@
+INCIDENT TIMELINE
+
+09:01:15 - Failed login attempt for admin from 192.168.1.50
+09:01:18 - Failed login attempt for admin from 192.168.1.50
+09:01:22 - Failed login attempt for root from 192.168.1.50
+09:01:25 - Failed login attempt for test from 192.168.1.50
+09:01:30 - Failed login attempt for admin from 192.168.1.50
+09:01:45 - Successful login for kali from 192.168.1.20
+09:02:01 - Failed login attempt for root from 192.168.1.50
+09:02:05 - Failed login attempt for admin from 192.168.1.50
+09:02:09 - Failed login attempt for guest from 192.168.1.50
+09:02:13 - Failed login attempt for admin from 192.168.1.50
+09:02:20 - Successful login for kali from 192.168.1.20
+09:02:30 - Failed login attempt for root from 192.168.1.50

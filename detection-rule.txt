@@ -1,0 +1,37 @@
+SOC DETECTION RULE
+
+Rule Name:
+SSH Brute Force Detection
+
+Log Source:
+Linux SSH Authentication Logs
+
+Detection Logic:
+Identify an IP address that generates 5 or more
+failed SSH login attempts within 10 minutes.
+
+Threshold:
+5 failed login attempts
+
+Time Window:
+10 minutes
+
+Alert Severity:
+Medium
+
+Alert Condition:
+If the number of failed SSH login attempts from
+a single IP address reaches or exceeds 5 within
+10 minutes, generate an alert.
+
+Investigation:
+Check the source IP address.
+Identify targeted usernames.
+Check whether a successful login occurred.
+Review the activity timeline.
+
+Recommended Response:
+Investigate the source IP.
+Review successful authentication events.
+Block the source IP if malicious activity is confirmed.
+Monitor the affected accounts.
